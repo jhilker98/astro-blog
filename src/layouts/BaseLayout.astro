@@ -1,6 +1,7 @@
 ---
 import Header from "@components/Header.astro";
 import FixedSidebar from "@components/FixedSidebar.astro";
+import "@fontsource/ibm-plex-sans";
 ---
 
 <html lang="en">
@@ -12,7 +13,7 @@ import FixedSidebar from "@components/FixedSidebar.astro";
     <title>Astro</title>
   </head>
   
-  <body class="min-h-screen grid grid-cols-layout grid-rows-layout grid-areas-mobile lg:grid-areas-desktop">
+  <body class="min-h-screen grid grid-cols-layout grid-rows-layout grid-areas-mobile lg:grid-areas-desktop bg-branding-white">
     <Header/>
     <FixedSidebar/>
     <main class="grid-in-main">
