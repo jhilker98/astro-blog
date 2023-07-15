@@ -1,5 +1,7 @@
 ---
+import Header from "@components/Header.astro";
 ---
+
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -9,7 +11,10 @@
     <title>Astro</title>
   </head>
   
-  <body>
-    <slot/>
+  <body class="min-h-screen grid grid-cols-layout grid-rows-layout grid-areas-mobile lg:grid-areas-desktop">
+    <Header/>
+    <main class="grid-in-main">
+      <slot/>
+    </main>
     </body>
 </html>
