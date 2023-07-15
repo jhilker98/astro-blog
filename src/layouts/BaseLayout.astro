@@ -1,5 +1,6 @@
 ---
 import Header from "@components/Header.astro";
+import FixedSidebar from "@components/FixedSidebar.astro";
 ---
 
 <html lang="en">
@@ -13,6 +14,7 @@ import Header from "@components/Header.astro";
   
   <body class="min-h-screen grid grid-cols-layout grid-rows-layout grid-areas-mobile lg:grid-areas-desktop">
     <Header/>
+    <FixedSidebar/>
     <main class="grid-in-main">
       <slot/>
     </main>
