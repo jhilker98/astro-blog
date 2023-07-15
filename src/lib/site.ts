@@ -1,3 +1,4 @@
+
 type SiteConfig = {
         title: string,
         description: string,
@@ -9,3 +10,8 @@ export const SITE_META: SiteConfig = {
         description: "The personal website and blog of Jacob Hilker.",
         author: "Jacob Hilker"
 }
+
+export const NAV_LINKS = [
+        { href: "/", name: "Home"},
+        { href: "/resume/", name: "Resumé"}
+];
