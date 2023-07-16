@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
+import BlogPostHeader from "@components/BlogPostHeader.astro";
 import "@fontsource/ibm-plex-serif";
 import { getCollection } from "astro:content";
 // 1. Generate a new path for every collection entry
@@ -17,7 +18,7 @@ const { Content } = await post.render();
 
 <BaseLayout title={post.data.title}>
   <article class="prose max-w-[80ch] p-2 mx-auto prose-headings:font-serif">
-    <h1>{post.data.title}</h1>
+    <BlogPostHeader title={post.data.title} pubDate={post.data.pubDate} />
     <Content />
   </article>
 </BaseLayout>
