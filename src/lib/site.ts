@@ -15,3 +15,12 @@ export const NAV_LINKS = [
         { href: "/", name: "Home"},
         { href: "/resume/", name: "Resumé"}
 ];
+
+export function formatDate(date: Date){
+        return new Date(date).toLocaleDateString("en-GB", { 
+                timeZone: "UTC",
+                day: "numeric",
+                month: "short",
+                year: "numeric",
+        });
+}

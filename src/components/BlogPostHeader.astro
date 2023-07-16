@@ -2,7 +2,7 @@
 const { title, pubDate } = Astro.props;
 import { Icon } from "astro-icon";
 
-let pub = new Intl.DateTimeFormat(pubDate);
+import { formatDate } from "@lib/site";
 ---
 
 <header class="align-baseline">
@@ -10,6 +10,6 @@ let pub = new Intl.DateTimeFormat(pubDate);
   <Icon name="mdi:calendar" class="w-5 mb-1 inline-block" />
   <span class="font-bold">Posted:</span>
   <time class="inline">
-    {new Intl.DateTimeFormat("en-GB", { dateStyle: "long" }).format(pubDate)}
+    {formatDate(pubDate)}
   </time>
 </header>
