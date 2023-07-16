@@ -2,6 +2,7 @@
 title: Hello World
 pubDate: 2023-07-15
 draft: true
+slug: hello-world
 ---
 
 Laborum deserunt et culpa ea nisi fugiat nisi do ut quis aliqua in proident labore. Do consequat do cupidatat esse. Aliqua ad laboris adipisicing labore est dolore do laborum. Laboris dolor anim tempor ex.
@@ -15,12 +16,12 @@ Here is some cool code to highlight:
 ```html
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Example HTML5 Document</title>
-</head>
-<body>
-  <p>Test</p>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <title>Example HTML5 Document</title>
+  </head>
+  <body>
+    <p>Test</p>
+  </body>
 </html>
 ```
