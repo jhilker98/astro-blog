@@ -13,17 +13,21 @@ const currentPath = pathname.slice(1, 2); // remove the first "/"
     >
       <Icon name="mdi:menu" class="h-5 w-5" aria-label="Sidebar toggle logo" />
     </button>
-    <nav class="items-center hidden h-full space-x-3 lg:flex">
-      <!-- {
+    <nav class="lg:ml-3 items-center hidden h-full space-x-4 lg:flex">
+      {
         NAV_LINKS.map((link) => (
           <a
             href={link.href}
-            class=`h-full p-3 {currentPath === link.href ? 'border-b-2 border-blue-500' : ''}`
+            class={
+              link.href.slice(1) == currentPath
+                ? "border-b-2 border-blue-500 h-full p-3 hover:bg-gray-400 transition-colors duration-100"
+                : "h-full p-3 hover:bg-gray-400 transition-colors duration-100"
+            }
           >
             {link.name}
           </a>
         ))
-      } -->
+      }
     </nav>
     <button
       class="bg-purple-200 justify-end h-full p-3 2xl:p-4 transition-all duration-75 hover:bg-purple-300"
