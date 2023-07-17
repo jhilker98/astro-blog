@@ -14,12 +14,12 @@ const posts = await getCollection("blog");
     aria-role="Hero Section"
   >
     <h1
-      class="text-4xl font-semibold uppercase lg:text-6xl px-4 py-4 mb-4 font-serif"
+      class="text-3xl font-semibold uppercase lg:text-6xl px-4 py-4 mb-4 font-serif"
     >
-      {SITE_META.author}
+      Hi, I'm Jacob
     </h1>
-    <p class="text-3xl font-semibold mx-4">Freelance Web Developer</p>
-    <p class="ml-4 mt-6 max-w-[80ch] leading-10 lg:text-lg lg:leading-[2.25]">
+    <p class="text-2xl font-semibold mx-4">Freelance Web Developer</p>
+    <p class="ml-4 mt-6 max-w-[60ch] leading-10 lg:text-lg lg:leading-[2.25]">
       I create accessible, performant, and easy-to-use websites using free and
       open-source technologies such as TailwindCSS, Hugo, and Astro.
       {
@@ -32,5 +32,12 @@ const posts = await getCollection("blog");
       class="p-2 font-bold bg-branding-royal-600 hover:bg-branding-royal-500 transition-colors duration-50 rounded-sm my-4 ml-4 text-sm text-white"
       >Contact Me</button
     >
+
+    <h2 class="text-2xl text-center mt-4 font-bold">My Tech Stack</h2>
+    <div class="columns-3">
+      <div>Column 01</div>
+      <div>Column 02</div>
+      <div>Column 03</div>
+    </div>
   </section>
 </BaseLayout>
