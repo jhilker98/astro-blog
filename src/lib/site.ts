@@ -25,7 +25,8 @@ export const SITE_META: SiteConfig = {
 
 export const NAV_LINKS = [
         { href: "/", name: "Home"},
-        { href: "/resume/", name: "Resumé"}
+        { href: "/resume/", name: "Resumé"},
+        { href: "/blog/", name: "Blog"}
 ];
 
 export function slugifyPostDates(d: Date): string {
