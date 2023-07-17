@@ -14,8 +14,17 @@ const blogCollection = defineCollection({
             weight: z.number({required_error: "Any post in a series must have a weight to sort by in that series."}),
         }).optional(),
     })
-})
+});
+
+const projectCollection = defineCollection({
+    type: "content",
+    schema: z.object({
+        title: z.string({required_error: "A title is required for a project."}),
+        description: z.string({required_error: "A brief description for the project is required."})
+    })
+});
 
 export const collections = {
-    "blog": blogCollection
+    "blog": blogCollection,
+    "projects": projectCollection
 }
