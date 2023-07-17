@@ -4,6 +4,21 @@ import BlogPostHeader from "@components/BlogPostHeader.astro";
 import "@fontsource/ibm-plex-serif";
 import { getCollection, CollectionEntry } from "astro:content";
 // 1. Generate a new path for every collection entry
+function slugifyPostDates(d: Date): string {
+  const formatters = {
+    year: new Intl.DateTimeFormat("en-US", {
+      timeZone: "UTC",
+      //day: "2-digit",
+      year: "numeric",
+    }),
+    month: new Intl.DateTimeFormat("en-US", {
+      timeZone: "UTC",
+      month: "2-digit",
+    }),
+  };
+  return `${formatters.year.format(d)}/${formatters.month.format(d)}`;
+}
+
 export async function getStaticPaths() {
   const posts = await getCollection("blog");
   return posts.map((post) => ({
@@ -17,12 +32,14 @@ interface Props {
 }
 // 2. When it's time to render, you can get the entry directly from the prop
 const { post } = Astro.props;
+
 const { Content } = await post.render();
 ---
 
 <BaseLayout title={post.data.title}>
   <article class="prose max-w-[80ch] p-2 mx-auto prose-headings:font-serif">
     <BlogPostHeader title={post.data.title} pubDate={post.data.pubDate} />
+    <p>{console.log(slugifyPostDates(post.data.pubDate))}</p>
     <Content />
   </article>
 </BaseLayout>
