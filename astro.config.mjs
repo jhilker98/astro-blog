@@ -7,8 +7,12 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   integrations: [alpinejs(), tailwind()],
   markdown: {
+    drafts: true,
     shikiConfig: {
       theme: "material-theme-darker",
     },
+  },
+  experimental: {
+    assets: true,
   },
 });
