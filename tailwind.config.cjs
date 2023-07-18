@@ -33,5 +33,6 @@ module.exports = {
     require("@savvywombat/tailwindcss-grid-areas"),
     require("@tailwindcss/typography"),
     require("tailwind-scrollbar"),
+    require("daisyui"),
   ],
 };
