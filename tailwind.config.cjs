@@ -13,7 +13,7 @@ module.exports = {
       desktop: [
         "sidebar header header",
         "sidebar main main",
-        "sidebar footer footer",
+        "sidebar main main",
       ],
     },
     extend: {
