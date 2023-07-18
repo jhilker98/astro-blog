@@ -3,17 +3,22 @@ import BaseLayout from "@layouts/BaseLayout.astro";
 import { SITE_META } from "@lib/site";
 import "@fontsource/ibm-plex-serif/600.css";
 import { getCollection } from "astro:content";
-
+import { Image } from "astro:assets";
 const title = "Home";
 const posts = await getCollection("blog");
+import Hero from "@assets/Hero.jpeg";
 ---
 
 <BaseLayout title={title}>
   <section aria-role="Hero Section" class="min-h-screen hero">
     <div class="hero-content flex-col lg:flex-row-reverse">
-      <img
-        src="/images/stock/photo-1635805737707-575885ab0820.jpg"
-        class="max-w-sm rounded-lg shadow-2xl"
+      <Image
+        src={Hero}
+        class="max-w-sm rounded-sm"
+        width="300"
+        height="500"
+        aspectRatio="16:9"
+        alt="Myself leaning on a tree."
       />
       <div>
         <h1 class="text-5xl font-bold font-serif uppercase">Hi, I'm Jacob</h1>
