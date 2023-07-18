@@ -18,10 +18,14 @@ const posts = await getCollection("blog");
       <div>
         <h1 class="text-5xl font-bold font-serif uppercase">Hi, I'm Jacob</h1>
         <h2 class="text-3xl font-bold my-4">Freelance Web Developer</h2>
-        <p class="py-6">
-          Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-          excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a
-          id nisi.
+        <p class="py-6 max-w-[80ch]">
+          I create accessible, performant, and easy-to-use websites using free
+          and open-source technologies such as TailwindCSS, Hugo, and Astro.
+          {
+            SITE_META.availableForHire
+              ? "I'm currently available for hire, so feel free to reach out using the button below."
+              : ""
+          }
         </p>
         <button class="btn btn-primary">Get Started</button>
       </div>

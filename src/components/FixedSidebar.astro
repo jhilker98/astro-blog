@@ -1,11 +1,16 @@
 ---
 import { SITE_META } from "@lib/site";
+import { Icon } from "astro-icon";
 ---
 
 <aside
-  class="hidden grid-in-sidebar bg-blue-500 lg:flex lg:flex-col items-center"
+  class="drawer lg:drawer-open lg:grid-in-sidebar z-10 bg-branding-primary"
 >
-  <p class="font-bold mt-2 text-2xl text-white uppercase">{SITE_META.title}</p>
-
-  <!-- todo: Site Sidebar -->
+  <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
+  <div class="drawer-content flex flex-col items-center justify-center">
+    <!-- Page content here -->
+    <label for="my-drawer-2" class="btn btn-primary drawer-button lg:hidden"
+      >Open drawer</label
+    >
+  </div>
 </aside>
