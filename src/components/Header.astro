@@ -5,6 +5,18 @@ const pathname = new URL(Astro.request.url).pathname;
 const currentPath = pathname.slice(1); // remove the first "/"
 ---
 
-<header class="z-10 items-center grid-in-header">
-  <p class="text-black ml-12">Header Text</p>
+<header class="z-10 items-center grid-in-header bg-red-100">
+  <nav class="navbar bg-red-200 space-x-4">
+    {
+      NAV_LINKS.map((link) => (
+        <a
+          href={link.href}
+          class="btn bg-transparent text-branding-text h-full hover:bg-red-300 transition-colors duration-100 border-0 font-sans"
+          role="button"
+        >
+          {link.name}
+        </a>
+      ))
+    }
+  </nav>
 </header>
