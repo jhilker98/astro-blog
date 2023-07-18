@@ -44,5 +44,8 @@ module.exports = {
     require("tailwind-scrollbar"),
     require("daisyui"),
   ],
-  daisyui: {},
+  daisyui: {
+    base: false,
+    //    styled: false,
+  },
 };

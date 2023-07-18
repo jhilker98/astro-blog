@@ -8,6 +8,7 @@ type SiteConfig = {
         title: string,
         description: string,
         author: string,
+        tagline: string,
         availableForHire: boolean,
         socialLinks: SocialLink[]
 }
@@ -18,8 +19,12 @@ export const SITE_META: SiteConfig = {
         description: "The personal website and blog of Jacob Hilker.",
         author: "Jacob Hilker",
         availableForHire: true,
+        tagline: "A front-end developer, who enjoys using Emacs, Hugo, Python, and Tailwind.",
         socialLinks: [
-                {icon: "devicon:github", href: "https://github.com/jhilker98"}
+                { icon: "fa6-brands:github", href: "https://github.com/jhilker98"},
+                { icon: "fa6-brands:gitlab", href: "https://gitlab.com/jhilker98" },
+                { icon: "fa6-brands:linkedin", href: "https://linkedin.com/in/jhilker"},
+                { icon: "fa6-brands:codepen", href: "https://codepen.io/hilkerj/"}
         ]
 }
 

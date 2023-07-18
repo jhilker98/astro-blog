@@ -1,8 +1,50 @@
 ---
 import { SITE_META } from "@lib/site";
 import { Icon } from "astro-icon";
+import { Image } from "astro:assets";
 ---
 
-<aside class="drawer lg:drawer-open">
-  <button class="bg-red-300 p-3 drawer-toggle">Sidebar</button>
+<aside
+  class="hidden lg:block drawer lg:drawer-open bg-branding-primary text-white grid-in-sidebar"
+>
+  <div class="drawer-content flex flex-col items-center">
+    <h2 class="p-2 font-semibold uppercase">{SITE_META.title}</h2>
+    <div class="drawer-content">
+      <div
+        class="mt-3 rounded-full bg-branding-secondary w-40 h-40 overflow-hidden mx-auto"
+      >
+        <Image
+          src="https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairShortFlat&accessoriesType=Prescription02&hairColor=Black&facialHairType=Blank&clotheType=ShirtCrewNeck&clotheColor=Black&eyeType=Default&eyebrowType=DefaultNatural&mouthType=Smile&skinColor=Light"
+          alt="My personal avatar"
+          width="500"
+          height="550"
+        />
+      </div>
+
+      <p
+        class="mx-auto mt-2 text-sm text-center text-branding-secondary max-w-[30ch] p-2"
+      >
+        {SITE_META.tagline}
+        {SITE_META.availableForHire ? "Currently available for hire." : ""}
+      </p>
+
+      <div class="flex mx-auto space-x-2.5 p-3 text-2xl justify-center">
+        {
+          SITE_META.socialLinks.map((link) => (
+            <a
+              href={link.href}
+              class:list={[
+                "transition-colors text-2xl duration-75 text-white hover:text-blue-400",
+              ]}
+            >
+              <Icon
+                name={link.icon}
+                class:list={["h-6 w-6 fill-white hover:fill-blue-400"]}
+              />
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </div>
 </aside>
