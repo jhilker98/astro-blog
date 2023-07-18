@@ -37,8 +37,14 @@ import { Icon } from "astro-icon";
               : ""
           }
         </p>
-        <button class="btn btn-primary">Contact Me</button>
+        <div class="space-x-3">
+          <button role="button" class="btn btn-primary">Contact Me</button>
+          <button role="button" class="btn btn-secondary">Who Am I?</button>
+        </div>
       </div>
     </div>
+  </section>
+  <section class="min-h-screen text-branding-text" aria-role="About Me">
+    <h1 class="text-4xl p-4">About Me</h1>
   </section>
 </BaseLayout>
