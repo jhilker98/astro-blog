@@ -9,5 +9,22 @@ const posts = await getCollection("blog");
 ---
 
 <BaseLayout title={title}>
-  <section aria-role="Hero Section"></section>
+  <section aria-role="Hero Section" class="min-h-screen hero">
+    <div class="hero-content flex-col lg:flex-row-reverse">
+      <img
+        src="/images/stock/photo-1635805737707-575885ab0820.jpg"
+        class="max-w-sm rounded-lg shadow-2xl"
+      />
+      <div>
+        <h1 class="text-5xl font-bold font-serif uppercase">Hi, I'm Jacob</h1>
+        <h2 class="text-3xl font-bold my-4">Freelance Web Developer</h2>
+        <p class="py-6">
+          Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
+          excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a
+          id nisi.
+        </p>
+        <button class="btn btn-primary">Get Started</button>
+      </div>
+    </div>
+  </section>
 </BaseLayout>
