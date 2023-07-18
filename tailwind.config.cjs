@@ -27,6 +27,15 @@ module.exports = {
       gridTemplateRows: {
         layout: "0.2fr 2.6fr 0.2fr",
       },
+      colors: {
+        branding: {
+          text: "#091725",
+          background: "#f3f7fc",
+          primary: "#1e4c7b",
+          secondary: "#d1d3d7",
+          accent: "#86694b",
+        },
+      },
     },
   },
   plugins: [
