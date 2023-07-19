@@ -38,9 +38,8 @@ const { Content } = await post.render();
 ---
 
 <BaseLayout title={post.data.title}>
-  <article class="prose max-w-[80ch] p-2 mx-auto prose-headings:font-serif">
+  <article class="prose max-w-[80ch] p-2 lg:mx-auto prose-headings:font-serif">
     <BlogPostHeader title={post.data.title} pubDate={post.data.pubDate} />
     <Content />
   </article>
 </BaseLayout>
- @lib/utils
