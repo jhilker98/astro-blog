@@ -15,10 +15,11 @@ const currentPath = pathname.slice(1); // remove the first "/"
     </button>
     <nav class="hidden ml-4 lg:flex items-center space-x-4">
       {
+        // TODO add active nav-link class
         NAV_LINKS.map((link) => (
           <a
             href={link.href}
-            class="bg-transparent text-branding-text h-full p-5 duration-150 border-0 font-sans hover:backdrop-brightness-75 transition-all"
+            class="bg-transparent text-branding-text h-full p-4 duration-150 border-0 font-sans hover:backdrop-brightness-75 transition-all"
           >
             {link.name}
           </a>
