@@ -3,7 +3,7 @@ import BaseLayout from "@layouts/BaseLayout.astro";
 import BlogPostHeader from "@components/BlogPostHeader.astro";
 import "@fontsource/ibm-plex-serif";
 import { getCollection, CollectionEntry } from "astro:content";
-import { slugifyPostDates } from "@lib/site";
+import { slugifyPostDates } from "@lib/utils";
 // 1. Generate a new path for every collection entry
 
 export async function getStaticPaths() {
@@ -17,10 +17,9 @@ export async function getStaticPaths() {
     //  timeZone: "UTC",
     //  month: "2-digit",
     //});
-    post.slug = `${slugifyPostDates(post.data.pubDate)}/${post.slug}`;
     return {
       params: {
-        slug: post.slug,
+        slug: `${slugifyPostDates(post.data.pubDate)}/${post.slug}`,
       },
       props: {
         post,
@@ -44,3 +43,4 @@ const { Content } = await post.render();
     <Content />
   </article>
 </BaseLayout>
+ @lib/utils

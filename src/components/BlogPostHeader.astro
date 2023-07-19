@@ -2,7 +2,7 @@
 const { title, pubDate } = Astro.props;
 import { Icon } from "astro-icon";
 
-import { formatDate } from "@lib/site";
+import { formatDate } from "@lib/utils";
 ---
 
 <header class="align-baseline">
@@ -13,3 +13,4 @@ import { formatDate } from "@lib/site";
     {formatDate(pubDate)}
   </time>
 </header>
+@lib/utils

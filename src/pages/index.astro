@@ -1,6 +1,6 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
-import { SITE_META } from "@lib/site";
+import { SITE_META } from "@lib/utils";
 import "@fontsource/ibm-plex-serif/600.css";
 import { getCollection } from "astro:content";
 import { Image } from "astro:assets";
@@ -48,3 +48,4 @@ import { Icon } from "astro-icon";
     <h1 class="text-4xl p-4">About Me</h1>
   </section>
 </BaseLayout>
+@lib/utils

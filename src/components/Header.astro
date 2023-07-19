@@ -1,5 +1,5 @@
 ---
-import { NAV_LINKS } from "@lib/site";
+import { NAV_LINKS } from "@lib/utils";
 import { Icon } from "astro-icon";
 const pathname = new URL(Astro.request.url).pathname;
 const currentPath = pathname.slice(1); // remove the first "/"
@@ -11,8 +11,7 @@ const currentPath = pathname.slice(1); // remove the first "/"
       NAV_LINKS.map((link) => (
         <a
           href={link.href}
-          class="btn bg-transparent text-branding-text h-full hover:bg-red-300 transition-colors duration-100 border-0 font-sans"
-          role="button"
+          class="bg-transparent text-branding-text h-full hover:bg-red-300 transition-colors duration-100 border-0 font-sans"
         >
           {link.name}
         </a>
