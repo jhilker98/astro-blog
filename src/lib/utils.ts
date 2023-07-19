@@ -34,6 +34,10 @@ interface NavLink {
         children?: NavLink[]
 }
 
+export function isNavLinkActive(p1: string, p2: string) : boolean {
+        return p1 === p2;
+}
+
 export const NAV_LINKS = [
         { href: "/", name: "Home"},
         { href: "/resume/", name: "Resumé"},
