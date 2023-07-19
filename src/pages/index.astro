@@ -1,7 +1,8 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import { SITE_META } from "@lib/utils";
-import "@fontsource/ibm-plex-serif/600.css";
+import "@fontsource/ibm-plex-serif/700.css";
+
 import { getCollection } from "astro:content";
 import { Image } from "astro:assets";
 const title = "Home";
@@ -21,15 +22,15 @@ import { Icon } from "astro-icon";
         aspectRatio="16:9"
         alt="Myself leaning on a tree."
       />
-      <div>
+      <div class="text-center lg:text-justify">
         <h1 class="text-5xl font-bold font-serif uppercase text-branding-black">
           Hi, I'm
           <span class="text-branding-navy-500">Jacob</span>
         </h1>
-        <h2 class="text-3xl font-bold my-4 text-branding-text/90">
+        <h2 class="text-3xl font-bold my-4 lg:my-6 text-branding-text/90">
           Freelance Web Developer
         </h2>
-        <p class="py-6 max-w-[80ch] text-branding-text/75">
+        <p class="py-4 lg:py-6 max-w-[80ch] text-branding-text/75">
           I create accessible, performant, and easy-to-use websites using free
           and open-source technologies such as TailwindCSS, Hugo, and Astro.
           {
