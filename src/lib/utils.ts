@@ -28,6 +28,12 @@ export const SITE_META: SiteConfig = {
         ]
 }
 
+interface NavLink {
+        href: string,
+        name: string,
+        children?: NavLink[]
+}
+
 export const NAV_LINKS = [
         { href: "/", name: "Home"},
         { href: "/resume/", name: "Resumé"},
