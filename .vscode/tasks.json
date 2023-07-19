@@ -7,6 +7,12 @@
       "problemMatcher": [],
       "label": "npm: dev",
       "detail": "astro dev"
+      "options": {
+        "shell": {
+          "executable": "/home/jhilker/.nix-profile/bin/zsh",
+          "args": ["-i", "-c"],
+        }
+      }
     }
   ]
 }
