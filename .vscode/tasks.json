@@ -9,10 +9,11 @@
       "detail": "astro dev",
       "options": {
         "shell": {
-          "executable": "/home/jhilker/.nix-profile/bin/zsh",
+          //"executable": "/home/jhilker/.nix-profile/bin/zsh",
           "args": ["-i", "-c"]
         }
-      }
+      },
+      "isBackground": true
     }
   ]
 }
