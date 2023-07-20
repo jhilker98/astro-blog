@@ -1,18 +1,19 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import { getCollection } from "astro:content";
-
-const posts = await getCollection("blog", ({ data }) => {
-  return data.draft !== true;
-});
+const posts = await getCollection("blog");
+import { formatDate } from "@lib/utils";
 ---
 
 <BaseLayout title="Blog">
   <section class="p-3 divide-y-2 divide-gray-400" aria-role="Blog">
     {
       posts.map((post) => (
-        <article class="prose prose-sm lg:prose-base prose-slate max-w-[80ch]">
-          <h2 class="mb-2 font-serif">{post.data.title}</h2>
+        <article class="prose prose-sm prose-h2:mb-1 lg:prose-base prose-slate max-w-[80ch]">
+          <h2 class="py-2 font-serif">{post.data.title}</h2>
+          <time datetime={post.data.pubDate.toISOString()}>
+            {formatDate(post.data.pubDate)}
+          </time>
         </article>
       ))
     }
