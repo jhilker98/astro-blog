@@ -1,0 +1,17 @@
+---
+import { NAV_LINKS } from "@lib/utils";
+---
+
+<nav
+  class="text-right lg:hidden bg-red-200 z-10 shadow-sm rounded-sm h-fit"
+  x-show="mobileOpen"
+  x-transition
+>
+  {
+    NAV_LINKS.map((link) => (
+      <a href={link.href} class:list={["block", "px-4", "py-2", "text-sm"]}>
+        {link.name}
+      </a>
+    ))
+  }
+</nav>

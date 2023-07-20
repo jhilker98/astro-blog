@@ -1,4 +1,6 @@
 ---
+import MobileMenu from "./MobileMenu.astro";
+
 import { NAV_LINKS, isNavLinkActive } from "@lib/utils";
 import { Icon } from "astro-icon";
 const pathname = new URL(Astro.request.url).pathname;
@@ -9,8 +11,11 @@ const currentPath = pathname.slice(1); // remove the first "/"
   class="z-10 items-center grid-in-header bg-secondary"
   x-data="{mobileOpen: false}"
 >
-  <div class="flex h-full">
-    <button class="h-full p-4 hover:bg-blue-300 lg:hidden">
+  <div class="flex h-[52px] 2xl:h-[62px]">
+    <button
+      class="h-full p-3 hover:bg-blue-300 lg:hidden"
+      x-on:click="mobileOpen = !mobileOpen"
+    >
       <Icon name="fa:bars" class="h-3 w-3" />
     </button>
     <nav class="hidden ml-4 lg:flex items-center space-x-4">
@@ -27,7 +32,7 @@ const currentPath = pathname.slice(1); // remove the first "/"
                   "bg-transparent",
                   "text-branding-text",
                   "h-full",
-                  "p-4",
+                  "p-3",
                   "duration-150",
                   "border-0",
                   "font-sans",
@@ -54,5 +59,6 @@ const currentPath = pathname.slice(1); // remove the first "/"
       <Icon name="fa:bars" class="h-3 w-3" />
     </button>
   </div>
+  <MobileMenu />
   <!-- TODO: Add Mobile Menu -->
 </header>
