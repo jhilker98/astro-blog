@@ -17,6 +17,7 @@ const currentPath = pathname.slice(1); // remove the first "/"
       {
         NAV_LINKS.map((link) => {
           //console.log(Astro.url.origin);
+          let url = link.href.split("/")[1];
           return (
             <a
               href={link.href}
@@ -31,12 +32,7 @@ const currentPath = pathname.slice(1); // remove the first "/"
                 "hover:backdrop-brightness-75",
                 "transition-all",
                 `${
-                  isNavLinkActive(
-                    currentPath,
-                    new URL(`${Astro.url.origin}/${link.href}`).pathname.slice(
-                      2,
-                    ),
-                  )
+                  isNavLinkActive(url, currentPath.split("/")[0])
                     ? "border-b-2 border-blue-500"
                     : ""
                 }`,
