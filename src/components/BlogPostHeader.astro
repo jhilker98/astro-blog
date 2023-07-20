@@ -1,5 +1,11 @@
 ---
-const { title, pubDate } = Astro.props;
+interface Props {
+  title: string;
+  pubDate: Date;
+  lastModDate?: Date;
+}
+
+const { title, pubDate, lastModDate = pubDate } = Astro.props;
 import { Icon } from "astro-icon";
 
 import { formatDate } from "@lib/utils";
@@ -12,4 +18,16 @@ import { formatDate } from "@lib/utils";
   <time class="inline">
     {formatDate(pubDate)}
   </time>
+  <!-- TODO: Add conditional formatting for date so if it's less than a day don't show -->
+  {
+    lastModDate > pubDate ? (
+      <div class="block">
+        <Icon name="mdi:calendar" class="w-5 mb-1 inline-block" />
+        <span class="font-bold">Last updated:</span>
+        <time class="inline">{formatDate(lastModDate)}</time>
+      </div>
+    ) : (
+      ""
+    )
+  }
 </header>

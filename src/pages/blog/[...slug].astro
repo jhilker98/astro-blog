@@ -39,7 +39,11 @@ const { Content } = await post.render();
 
 <BaseLayout title={post.data.title}>
   <article class="prose max-w-[80ch] p-2 lg:mx-auto prose-headings:font-serif">
-    <BlogPostHeader title={post.data.title} pubDate={post.data.pubDate} />
+    <BlogPostHeader
+      title={post.data.title}
+      pubDate={post.data.pubDate}
+      lastModDate={post.data.lastModDate}
+    />
     <Content />
   </article>
 </BaseLayout>
