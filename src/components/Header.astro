@@ -18,29 +18,32 @@ const currentPath = pathname.slice(1); // remove the first "/"
         NAV_LINKS.map((link) => {
           //console.log(Astro.url.origin);
           let url = link.href.split("/")[1];
-          return (
-            <a
-              href={link.href}
-              class:list={[
-                "bg-transparent",
-                "text-branding-text",
-                "h-full",
-                "p-4",
-                "duration-150",
-                "border-0",
-                "font-sans",
-                "hover:backdrop-brightness-75",
-                "transition-all",
-                `${
-                  isNavLinkActive(url, currentPath.split("/")[0])
-                    ? "border-b-2 border-blue-500"
-                    : ""
-                }`,
-              ]}
-            >
-              {link.name}
-            </a>
-          );
+          // console.log(link);
+          if (!link.children) {
+            return (
+              <a
+                href={link.href}
+                class:list={[
+                  "bg-transparent",
+                  "text-branding-text",
+                  "h-full",
+                  "p-4",
+                  "duration-150",
+                  "border-0",
+                  "font-sans",
+                  "hover:backdrop-brightness-75",
+                  "transition-all",
+                  `${
+                    isNavLinkActive(url, currentPath.split("/")[0])
+                      ? "border-b-2 border-blue-500"
+                      : ""
+                  }`,
+                ]}
+              >
+                {link.name}
+              </a>
+            );
+          }
         })
       }
     </nav>
