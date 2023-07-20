@@ -39,7 +39,7 @@ export function isNavLinkActive(p1: string, p2: string) : boolean {
 }
 
 
-export const NAV_LINKS = [
+export const NAV_LINKS: NavLink[] = [
         { href: "/", name: "Home"},
         { href: "/resume/", name: "Resumé"},
         { href: "/blog/", name: "Blog"}
