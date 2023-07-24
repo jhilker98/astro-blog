@@ -8,7 +8,9 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "lint:prettier": "prettier -w ./**/*.{ts,astro}"
+    "lint:prettier": "prettier -w ./**/*.{ts,astro}",
+    "lint:eslint": "eslint --fix ./**/*.{ts,astro}",
+    "lint": "npm run lint:eslint && npm run lint:prettier"
   },
   "dependencies": {
     "@astrojs/alpinejs": "^0.2.2",
