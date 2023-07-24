@@ -7,12 +7,13 @@ module.exports = {
   ],
   // ...
   "parserOptions": {
-    "ecmaVersion": "latest"
-},
+    "ecmaVersion": "latest",
+    "sourceType": "module",
+  },
 
-"env": {
+  "env": {
     "es6": true
-},
+  },
   overrides: [
     {
       // Define the configuration for `.astro` file.
