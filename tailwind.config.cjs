@@ -8,7 +8,7 @@ module.exports = {
       mobile: [
         "header header header",
         "main main main",
-        "footer footer footer",
+        "main main main",
       ],
       desktop: [
         "sidebar header header",
