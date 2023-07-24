@@ -8,7 +8,6 @@ import { Image } from "astro:assets";
 const title = "Home";
 const posts = await getCollection("blog");
 import Hero from "@assets/Hero.jpeg";
-import { Icon } from "astro-icon";
 ---
 
 <BaseLayout title={title}>
@@ -51,5 +50,16 @@ import { Icon } from "astro-icon";
   </section>
   <section class="min-h-screen text-branding-text">
     <h2 class="text-4xl p-4 ml-4 font-serif">About Me</h2>
+    <div class="mx-8 flex justify-between">
+      {
+        posts.map((post) => (
+          <article class="card max-w-80 bg-red-200 shadow-lg card-compact">
+            <div class="card-body prose prose-sm md:prose-base">
+              <h3>{post.data.title}</h3>
+            </div>
+          </article>
+        ))
+      }
+    </div>
   </section>
 </BaseLayout>
