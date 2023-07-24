@@ -16,11 +16,11 @@ interface Props {
 }
 
 const { project } = Astro.props;
-const { Content } = await project.render();
+//const { Content } = await project.render();
 ---
 
 <BaseLayout title={project.data.title}>
-<div class="prose p-3">
+  <div class="prose p-3">
     {project.data.description}
-</div>
+  </div>
 </BaseLayout>
