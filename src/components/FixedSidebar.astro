@@ -5,14 +5,12 @@ import { Image } from "astro:assets";
 ---
 
 <aside
-  class="hidden lg:block drawer lg:drawer-open bg-branding-navy text-white grid-in-sidebar"
->
+  class="hidden lg:block drawer lg:drawer-open bg-branding-navy text-white grid-in-sidebar">
   <div class="drawer-content flex flex-col items-center">
     <h2 class="p-2 font-semibold uppercase">{SITE_META.title}</h2>
     <div class="drawer-content">
       <div
-        class="mt-3 rounded-full bg-branding-gray-400 w-40 h-40 overflow-hidden mx-auto"
-      >
+        class="mt-3 rounded-full bg-branding-gray-400 w-40 h-40 overflow-hidden mx-auto">
         <Image
           src="https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairShortFlat&accessoriesType=Prescription02&hairColor=Black&facialHairType=Blank&clotheType=ShirtCrewNeck&clotheColor=Black&eyeType=Default&eyebrowType=DefaultNatural&mouthType=Smile&skinColor=Light"
           alt="My personal avatar"
@@ -22,8 +20,7 @@ import { Image } from "astro:assets";
       </div>
 
       <p
-        class="mx-auto mt-2 text-sm text-center text-branding-white/80 max-w-[30ch] p-2"
-      >
+        class="mx-auto mt-2 text-sm text-center text-branding-white/80 max-w-[30ch] p-2">
         {SITE_META.tagline}
         {SITE_META.availableForHire ? "Currently available for hire." : ""}
       </p>
@@ -35,8 +32,7 @@ import { Image } from "astro:assets";
               href={link.href}
               class:list={[
                 "transition-colors text-2xl duration-75 text-white hover:text-blue-400",
-              ]}
-            >
+              ]}>
               <Icon
                 name={link.icon}
                 class:list={["h-6 w-6 fill-white hover:fill-blue-400"]}

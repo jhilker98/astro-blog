@@ -9,13 +9,11 @@ const currentPath = pathname.slice(1); // remove the first "/"
 
 <header
   class="z-10 items-center grid-in-header bg-secondary"
-  x-data="{mobileOpen: false}"
->
+  x-data="{mobileOpen: false}">
   <div class="flex h-[52px] 2xl:h-[62px]">
     <button
       class="h-full p-3 hover:bg-blue-300 lg:hidden"
-      x-on:click="mobileOpen = !mobileOpen"
-    >
+      x-on:click="mobileOpen = !mobileOpen">
       <Icon name="fa:bars" class="h-3 w-3" />
     </button>
     <nav class="hidden ml-4 lg:flex items-center space-x-4">
@@ -43,8 +41,7 @@ const currentPath = pathname.slice(1); // remove the first "/"
                       ? "border-b-2 border-blue-500"
                       : ""
                   }`,
-                ]}
-              >
+                ]}>
                 {link.name}
               </a>
             );
@@ -54,8 +51,7 @@ const currentPath = pathname.slice(1); // remove the first "/"
     </nav>
 
     <button
-      class="h-full p-4 hover:bg-blue-300 lg:hidden justify-end ml-auto mr-0"
-    >
+      class="h-full p-4 hover:bg-blue-300 lg:hidden justify-end ml-auto mr-0">
       <Icon name="fa:bars" class="h-3 w-3" />
     </button>
   </div>
