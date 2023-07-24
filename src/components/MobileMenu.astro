@@ -3,8 +3,9 @@ import { NAV_LINKS } from "@lib/utils";
 ---
 
 <nav
-  class="hidden text-right lg:hidden bg-red-200 z-10 shadow-sm rounded-sm h-fit"
-  x-show="mobileOpen"
+  class="text-right lg:hidden bg-red-200 z-10 shadow-sm rounded-sm h-fit"
+  x-show="mobileOpen === true"
+  x-class="{'hidden': mobileOpen !== true}"
   x-transition>
   {
     NAV_LINKS.map((link) => (
