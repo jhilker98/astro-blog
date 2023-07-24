@@ -51,7 +51,7 @@ export function slugifyPostDates(d: Date): string {
    * @param {Date} d - The date of the post.
    * @returns {string} String in the format of `/year/month`.
    */
-  let f = {
+  const f = {
     year: new Intl.DateTimeFormat("en-US", { year: "numeric" }),
     month: new Intl.DateTimeFormat("en-US", { month: "2-digit" }),
   };
