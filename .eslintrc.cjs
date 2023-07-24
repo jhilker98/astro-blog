@@ -15,6 +15,7 @@ module.exports = {
   "env": {
     "es6": true
   },
+  ignorePatterns: ["src/env.d.ts"],
   overrides: [
     {
       // Define the configuration for `.astro` file.
