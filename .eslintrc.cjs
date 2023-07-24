@@ -4,6 +4,7 @@ module.exports = {
     // ...
     "plugin:astro/recommended",
     "plugin:jsx-a11y/recommended",
+    "plugin:@typescript-eslint/recommended"
   ],
   // ...
   "parserOptions": {
