@@ -1,16 +1,12 @@
 /** @type {import('tailwindcss').Config} */
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const defaultTheme = require("tailwindcss/defaultTheme");
+import type { Config } from "tailwindcss";
+import defaultTheme from "tailwindcss/defaultTheme";
 
-module.exports = {
+export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
     gridTemplateAreas: {
-      mobile: [
-        "header header header",
-        "main main main",
-        "main main main",
-      ],
+      mobile: ["header header header", "main main main", "main main main"],
       desktop: [
         "sidebar header header",
         "sidebar main main",
@@ -75,15 +71,9 @@ module.exports = {
       },
     },
   },
-  plugins: [
-    require("@savvywombat/tailwindcss-grid-areas"),
-    require("@tailwindcss/typography"),
-    require("tailwind-scrollbar"),
-    require("daisyui"),
-  ],
   daisyui: {
     base: false,
-    //    styled: false,
+    // styled: false,
     themes: [
       {
         mytheme: {
@@ -100,4 +90,10 @@ module.exports = {
       },
     ],
   },
-};
+  plugins: [
+    require("@savvywombat/tailwindcss-grid-areas"),
+    require("@tailwindcss/typography"),
+    require("tailwind-scrollbar"),
+    require("daisyui"),
+  ],
+} satisfies Config;
